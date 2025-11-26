@@ -54,21 +54,26 @@ flowchart LR
 ```
 
 🔹 Thành phần hệ thống
+
 🔴 Client miner
 - Chạy XMRig hoặc lolMiner trên máy người dùng
 - Thu thập thông tin hiệu suất (hashrate, nhiệt độ, shares, uptime)
 - Gửi dữ liệu định kỳ về backend dưới dạng JSON
+
 🔴 Backend API
 - Nhận dữ liệu thống kê từ client
 - Lưu trữ vào cơ sở dữ liệu
 - Cung cấp API cho dashboard
 - Broadcast dữ liệu real-time qua WebSocket
+
 🔴 Database
 - Lưu thông tin worker, lịch sử hashrate, trạng thái thiết bị và cấu hình
+
 🔴 Dashboard web
 - Hiển thị trạng thái máy đào theo thời gian thực
 - Biểu đồ hiệu suất và thu nhập ước tính
 - Quản lý nhiều worker từ một giao diện
+
 🔴 Mining pool
 - Xử lý việc đào coin
 - Trả phần thưởng dựa trên hashrate
@@ -95,9 +100,10 @@ flowchart LR
 - Có thể triển khai trên VPS hoặc mạng nội bộ
 - Minh bạch trong việc xử lý dữ liệu và mô hình doanh thu
 
+```markdown
 ```mermaid
-🔹Kiến trúc triển khai
-Client --> Internet --> BackendVPS
+flowchart TB
+    Client --> Internet --> BackendVPS
     BackendVPS --> Database[(mySQL)]
     BackendVPS --> Dashboard[Vercel/Netlify]
 ```
