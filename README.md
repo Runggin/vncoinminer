@@ -100,7 +100,6 @@ flowchart LR
 - Có thể triển khai trên VPS hoặc mạng nội bộ
 - Minh bạch trong việc xử lý dữ liệu và mô hình doanh thu
 
-```markdown
 ```mermaid
 flowchart TB
     Client --> Internet --> BackendVPS
